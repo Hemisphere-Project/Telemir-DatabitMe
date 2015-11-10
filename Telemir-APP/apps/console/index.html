@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../cssterm.css">
+    <script src="../jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script src="../socket.io.js"></script>
+    <script src="../cssterm.js"></script>
+    <script>
+    var alphabets = { //a: "4",
+                      b: "8",
+                      e: "3",
+                      //g: "6",
+                      i: "1",
+                      o: "0",
+                     s: "5",
+                     t: "7",
+                     z: "2" };
+    var counter = 0;
+
+    $(document).ready(function() {
+      var socket = io('http://127.0.0.1:8090');
+      socket.on('connect', function () {
+        console.log('Connected to Server ');
+      });
+      socket.on('start', function () {
+        $("#terminal-body p").html(   $("#initTXT").html( ) );
+      });
+      socket.on('oscdata', function (data) {
+        // NEW EEG LINE
+        if (!$('.lastDiv').length) {
+          var lD = $("#terminal-body p").append('<div class="lastDiv eegDiv">[EEG]</div>');
+          for (var prop in data) $(".val-"+prop).removeClass("val-"+prop);
+          for (var prop in data) {
+            $('.lastDiv').append( $('<div class="txt-'+prop+'">').html('&nbsp;&nbsp;&nbsp;'+prop+': ') );
+            $('.lastDiv').append('<div class="val-'+prop+'">');
+          }
+          $("html, body").stop(true,true).animate({ scrollTop: $(document).height() },10);
+        }
+
+        // UPDATE DATA
+        for (var prop in data) $(".lastDiv .val-"+prop).text(data[prop]);
+
+      });
+      socket.on('phrase_step2', function (data) {
+        data = data[0];
+        for (var i = 0; i < data.length; i++)
+          if (alphabets[data[i]]) data = data.replace(data[i], alphabets[data[i]]);
+        $("#terminal-body p").append( '<div class="txtDiv">[TXT]&nbsp;&nbsp;&nbsp;'+ data + '</div>' );
+        $('.lastDiv').removeClass("lastDiv");
+        $("html, body").stop(true,true).animate({ scrollTop: $(document).height() },10);
+      });
+      socket.on('stop', function () {
+        $("#terminal-body p").html("");
+      });
+
+
+      // function scrollDown(){ $("html, body").animate({ scrollTop: $(document).height() }, 400); };
+      // setInterval(scrollDown, 700);
+      //scrollDown();
+      $("#terminal-body p").html(   $("#initTXT").text().replace(/\n/g, "<br />") );
+    });
+    </script>
+  </head>
+<body>
+  <div id="cssTerm" class="cssterm">
+  </div>
+  <div id="initTXT" style="display:none;">
+  $ uname -a
+  Linux TeleMir-X370.localdomain 3.9.6-301.fc19.x86_64 #1 SMP Mon Jun 17 14:26:26 UTC 2015 x86_64 GNU/Linux
+  <br /><br />
+  </div>
+</body>
+</html>

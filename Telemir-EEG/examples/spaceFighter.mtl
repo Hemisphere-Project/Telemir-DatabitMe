@@ -1,0 +1,71 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+newmtl 13_-_Default
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+map_Kd spaceFighter/gunport-paint-02.gif
+#bump gunport-bm-02.gif
+#
+newmtl dagger_intake
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.9
+illum 2
+map_Kd spaceFighter/intake-paint-03.gif
+#bump intake-bm-03.gif
+#
+newmtl model_clay
+Ka  0.9 0.9 0.9
+Kd  0.9 0.9 0.9
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+#
+newmtl 10_-_Default
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.6
+illum 2
+map_Kd spaceFighter/bottomexhaust-paint-05.gif
+#bump bottomexhaust-bm-05.gif
+#
+newmtl bottom_fin
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+map_Kd spaceFighter/bottomwing-paint-01.gif
+#bump bottomwing-bm-01.gif
+#
+newmtl dagger_hull
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.9
+illum 2
+map_Kd spaceFighter/dagger-hull-paint24.gif
+#bump dagger-hull-bumpmap06.gif
+#
+newmtl upper_exhaust
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.9
+illum 2
+map_Kd spaceFighter/upperexhaust-paint-06.gif
+#bump upperexhaust-bm-06.gif
+#
+# EOF

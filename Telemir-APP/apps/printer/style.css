@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "RotisSanSer";
+    src: url('fonts/RotisSanSer.ttf');
+}
+@font-face {
+    font-family: "RotisSemSanBol";
+    src: url('fonts/RotisSemSanBol.ttf');
+}
+@font-face {
+    font-family: "RotisSer";
+    src: url('fonts/RotisSer.ttf');
+}
+@font-face {
+    font-family: "RotisSerIta";
+    src: url('fonts/RotisSerIta.ttf');
+}
+@font-face {
+    font-family: "Telemirrotisserif";
+    src: url('fonts/Telemirrotisserif.ttf');
+}
+@font-face {
+    font-family: "Telemirrotissansserif";
+    src: url('fonts/Telemirrotissansserif.ttf');
+}
+@font-face {
+    font-family: "UniveEig";
+    src: url('fonts/UniveEig.ttf');
+}
+
+
+
+body {
+  font-family: RotisSanSer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;
+  /*font-size: 60pt;*/
+  font-size: 7vw;
+  background-color: white;
+  text-align:center;
+  /*max-width: 1280px;
+  max-height:960px;*/
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+
+#container {
+  height: 100%;
+  line-height:120%;
+}
+
+.text{
+  width: 90%;
+   margin-left: 5%;
+   margin-right:5%;
+}

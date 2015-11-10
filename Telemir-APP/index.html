@@ -1,0 +1,59 @@
+<html>
+
+<head>
+
+<title>Frameless Window</title>
+
+<link rel="stylesheet" type="text/css" href="ressources/style.css" />
+<script type='text/javascript' src='ressources/jquery-2.1.4.min.js' onload="window.$ = window.jQuery = module.exports;"></script>
+
+<script>
+  window.onfocus = function() { console.log("focus"); }
+  window.onblur = function() { console.log("blur"); }
+  window.onresize = function() { }
+
+  window.onload = function() {
+    $(".close-window-button").on('click', function() { window.close(); });
+    $(".close-window-button").onmouseover = function() {
+      updateImageUrl(button_id, "ressources/img/button_close_hover.png");
+    }
+    $(".close-window-button").onmouseout = function() {
+      updateImageUrl(button_id, "ressources/img/button_close.png");
+    }
+  }
+
+  function updateImageUrl(image_id, new_image_url) {
+    var image = document.getElementById(image_id);
+    if (image) image.src = new_image_url;
+  }
+</script>
+
+</head>
+
+<body>
+
+<div id="top-titlebar" class="top-titlebar" style="background-color: rgb(122, 124, 124);">
+  <div class="top-titlebar-icon"><img id="top-titlebaricon" src="ressources/img/top-titlebar.png"></div>
+  <div class="top-titlebar-text"></div>
+  <div class="top-titlebar-close-button">
+    <img id="top-titlebar-close-button" class="close-window-button" src="ressources/img/button_close.png">
+  </div>
+  <div class="top-titlebar-divider"></div>
+</div>
+
+<div id="content">
+  <div id="inner-content">
+
+    MAIN WINDOW
+
+  </div>
+</div>
+
+<div id="bottom-titlebar" class="bottom-titlebar" style="background-color: rgb(122, 124, 124);">
+  <div class="bottom-titlebar-text"></div>
+  <div class="bottom-titlebar-divider"></div>
+</div>
+
+</body>
+
+</html>

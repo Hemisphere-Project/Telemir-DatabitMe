@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../cssterm.css">
+    <script src="../jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script src="../socket.io.js"></script>
+    <script src="../cssterm.js"></script>
+    <script>
+    var RANGE = 5;
+    var MAX = 100;
+    var prop = 'alpha';
+    var scale = {};
+    var total = {};
+    var runner = [' ','-','+','*'];
+
+    $(document).ready(function() {
+      var socket = io('http://192.168.1.11:8090');
+      socket.on('connect', function () {
+        console.log('Connected to Server ');
+      });
+      socket.on('oscdata', function (data) {
+
+        $("#terminal-body p").html('');
+
+        for(prop in data) {
+          if (typeof scale[prop] === 'undefined') scale[prop] = [];
+          if (typeof total[prop] === 'undefined') total[prop] = [];
+
+          //STORE SCALE
+          if (typeof scale[prop][Math.floor(data[prop]/RANGE)] === 'undefined') scale[prop][Math.floor(data[prop]/RANGE)] = 1;
+          else scale[prop][Math.floor(data[prop]/RANGE)]++;
+          total[prop]++;
+
+          //DISPLAY AVERAGE
+          $("#terminal-body p").append('<br />'+prop+' '+runner[total[prop]%4]+'<br />');
+          for (var i=0; i<=(MAX/(RANGE-1)); i++)
+            if (typeof scale[prop][i] !== 'undefined')
+              $("#terminal-body p").append((i*RANGE)+'-'+(i*RANGE+RANGE-1)+':'
+                                            +Math.floor(scale[prop][i]*100/total[prop])+'%'+'<br />');
+        }
+
+
+
+      });
+
+    });
+    </script>
+  </head>
+<body>
+  <div id="cssTerm" class="cssterm"></div>
+</body>
+</html>

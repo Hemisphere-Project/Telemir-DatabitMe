@@ -1,0 +1,101 @@
+{
+    "pyacq_version": "0.1.0-dev",
+    "streams": [
+        {
+            "buffer_length": 1800.0,
+            "channel_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "channel_names": [
+                "F3",
+                "F4",
+                "P7",
+                "FC6",
+                "F7",
+                "F8",
+                "T7",
+                "P8",
+                "FC5",
+                "AF4",
+                "T8",
+                "O2",
+                "O1",
+                "AF3"
+            ],
+            "name": "Emotiv Systems Pty Ltd #SN201105160008860",
+            "nb_channel": 14,
+            "packet_size": 1,
+            "port": 8233,
+            "sampling_rate": 128.0
+        },
+        {
+            "buffer_length": 1800.0,
+            "channel_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "channel_names": [
+                "Quality F3",
+                "Quality F4",
+                "Quality P7",
+                "Quality FC6",
+                "Quality F7",
+                "Quality F8",
+                "Quality T7",
+                "Quality P8",
+                "Quality FC5",
+                "Quality AF4",
+                "Quality T8",
+                "Quality O2",
+                "Quality O1",
+                "Quality AF3"
+            ],
+            "name": "Emotiv Systems Pty Ltd #SN201105160008861",
+            "nb_channel": 14,
+            "packet_size": 1,
+            "port": 8670,
+            "sampling_rate": 128.0
+        },
+        {
+            "buffer_length": 1800.0,
+            "channel_indexes": [
+                0,
+                1
+            ],
+            "channel_names": [
+                "X",
+                "Y"
+            ],
+            "name": "Emotiv Systems Pty Ltd #SN201105160008862",
+            "nb_channel": 2,
+            "packet_size": 1,
+            "port": 6924,
+            "sampling_rate": 128.0
+        }
+    ]
+}

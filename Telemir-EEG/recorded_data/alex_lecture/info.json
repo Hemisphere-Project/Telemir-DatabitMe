@@ -1,0 +1,110 @@
+{
+    "annotations": {
+        "rec_datetime": "2015-10-20T21:55:10.578966"
+    },
+    "pyacq_version": "0.1.0",
+    "streams": [
+        {
+            "buffer_length": 1800.0,
+            "channel_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "channel_names": [
+                "F3",
+                "F4",
+                "P7",
+                "FC6",
+                "F7",
+                "F8",
+                "T7",
+                "P8",
+                "FC5",
+                "AF4",
+                "T8",
+                "O2",
+                "O1",
+                "AF3"
+            ],
+            "dtype": "float32",
+            "name": "Emotiv Systems Pty Ltd #SN201203020012620",
+            "nb_channel": 14,
+            "packet_size": 1,
+            "port": 5721,
+            "sampling_rate": 128.0,
+            "stream_type": "AnalogSignalSharedMemStream"
+        },
+        {
+            "buffer_length": 1800.0,
+            "channel_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "channel_names": [
+                "Quality F3",
+                "Quality F4",
+                "Quality P7",
+                "Quality FC6",
+                "Quality F7",
+                "Quality F8",
+                "Quality T7",
+                "Quality P8",
+                "Quality FC5",
+                "Quality AF4",
+                "Quality T8",
+                "Quality O2",
+                "Quality O1",
+                "Quality AF3"
+            ],
+            "dtype": "float32",
+            "name": "Emotiv Systems Pty Ltd #SN201203020012621",
+            "nb_channel": 14,
+            "packet_size": 1,
+            "port": 9786,
+            "sampling_rate": 128.0,
+            "stream_type": "AnalogSignalSharedMemStream"
+        },
+        {
+            "buffer_length": 1800.0,
+            "channel_indexes": [
+                0,
+                1
+            ],
+            "channel_names": [
+                "X",
+                "Y"
+            ],
+            "dtype": "float32",
+            "name": "Emotiv Systems Pty Ltd #SN201203020012622",
+            "nb_channel": 2,
+            "packet_size": 1,
+            "port": 5028,
+            "sampling_rate": 128.0,
+            "stream_type": "AnalogSignalSharedMemStream"
+        }
+    ]
+}
